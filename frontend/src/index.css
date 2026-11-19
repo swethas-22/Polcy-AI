@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #FAF7F2;
+  --bg-card: #FFFFFF;
+  --navy-dark: #0B192C;
+  --navy-bubble: #12223D;
+  --gold-accent: #C5973A;
+  --gold-light: #F7EEDB;
+  --border-light: #E7E0D3;
+  --text-dark: #1E293B;
+  --text-muted: #64748B;
+  --tag-bg: #8B6B44;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5CEBE;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BAAF9C;
+}
+
+/* Dot animation for "Searching SKASC policies..." */
+@keyframes pulseDots {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+.dot-1 {
+  animation: pulseDots 1.4s infinite ease-in-out both;
+  animation-delay: -0.32s;
+}
+
+.dot-2 {
+  animation: pulseDots 1.4s infinite ease-in-out both;
+  animation-delay: -0.16s;
+}
+
+.dot-3 {
+  animation: pulseDots 1.4s infinite ease-in-out both;
+}
